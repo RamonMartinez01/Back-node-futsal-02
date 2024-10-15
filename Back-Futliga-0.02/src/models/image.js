@@ -11,6 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      // Asociación con la tabla equipo
+      this.belongsTo(models.equipo, {
+        foreignKey: 'equipo_id',
+        as: 'equipo'
+      });
     }
   }
   image.init({
